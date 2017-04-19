@@ -24,6 +24,7 @@ class MongoCache:
         self.db.webpage.update({'_id':url}, {'$set':record}, upsert=True)
 
 if __name__ == "__main__":
+    print timedelta()
     url = 'http://www.sina.com.cn'
     cache = MongoCache(expires=timedelta())
     result = {'html':'87654321'}
